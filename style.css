@@ -40,6 +40,12 @@ img {
   max-width: 100%;
 }
 
+.logo {
+  height: 20rem;
+  transform: scaleY(-1);
+  user-select: none;
+}
+
 p {
   position: relative;
   padding: 1rem;
