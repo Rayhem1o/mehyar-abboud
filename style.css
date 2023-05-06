@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aref+Ruqaa+Ink:wght@400&display=swap");
 
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Avenir, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
   background-color: black;
-  color: rgba(255, 255, 255, 0.87);
+  color: whitesmoke;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -15,18 +16,19 @@
 body {
   margin: 0;
   display: flex;
-
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 main {
-  max-width: 800px;
+  min-width: 320px;
+  max-width: 768px;
+  min-height: 100vh;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
-  font-family: "Oooh Baby", Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Aref Ruqaa Ink", Inter, Avenir, Helvetica, Arial, sans-serif;
   text-align: center;
   font-size: 6rem;
   line-height: 1.1;
@@ -36,14 +38,28 @@ h1 {
   z-index: 1;
 }
 
+@media screen and (max-width: 1200px) {
+  h1 {
+    margin-top: 0;
+  }
+}
+
 img {
   max-width: 100%;
 }
 
 .logo {
-  height: 20rem;
-  transform: scaleY(-1);
+  height: 28rem;
+  transform: rotate(-90deg);
   user-select: none;
+  position: absolute;
+  right: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .logo {
+    position: static;
+  }
 }
 
 p {
