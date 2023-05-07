@@ -61,6 +61,9 @@ main {
   box-sizing: border-box;
   gap: 2rem;
 }
+main {
+  overflow: hidden;
+}
 
 section {
   display: block;
@@ -85,7 +88,7 @@ a[href^="#"]:not(#read-more) {
 h1 {
   text-align: center;
   font-family: "Aref Ruqaa Ink", Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   line-height: 1.1;
   margin-top: 2rem;
   position: relative;
@@ -106,13 +109,18 @@ img {
   display: none;
   height: 100vh;
   width: 100vw;
-  background-image: url(photo.jpg);
+  background-image: url("/photo.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 75%;
+  background-color: black;
 }
 
 .logo {
   background-color: var(--color-orange);
-  -webkit-mask-image: url(logo.svg);
-  mask-image: url(logo.svg);
+  -webkit-mask-image: url("/logo.svg");
+  mask-image: url("/logo.svg");
+  mask-size: 100%;
   margin-top: 1rem;
   transform: rotate(-90deg);
   user-select: none;
@@ -128,14 +136,15 @@ img {
   }
   .logo {
     position: absolute;
-    top: 0;
-    left: 28rem;
+    top: -1rem;
+    left: 22rem;
+    transform: scale(0.8) rotate(-90deg);
   }
   h1.title {
     position: absolute;
     top: 2rem;
-    left: 2rem;
-    font-size: 4rem;
+    left: 4rem;
+    font-size: 3rem;
     color: var(--color-orange);
   }
 }
@@ -146,7 +155,7 @@ p {
   text-align: justify;
 }
 
-img.photo {
+img.profile {
   max-width: min(28rem, 90vw);
 }
 
@@ -163,8 +172,8 @@ section.contact::before {
   position: absolute;
   top: 0;
   bottom: 0;
+  right: -100vw;
   left: -100vw;
-  width: 300vw;
   background: black;
   z-index: -1;
 }
