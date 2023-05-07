@@ -6,26 +6,87 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Mehyar Abboud</title>
     
-    <link rel="icon" href="./favicon.svg" type="image/x-icon" />
-    <link rel="stylesheet" href="/mehyar-abboud/assets/index.079190a1.css">
+    <link rel="shortcut icon" href="./favicon_old.svg" type="image/x-icon" />
+    <script type="module" crossorigin src="/mehyar-abboud/assets/index.d3e85d58.js"></script>
+    <link rel="stylesheet" href="/mehyar-abboud/assets/index.fe16bae1.css">
   </head>
   <body>
     <main>
-      <img src="./logo.svg" class="logo" />
-      <h1>Mehyar Abboud</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pretium
-        maximus risus, at auctor lectus egestas sed. Donec ac pretium est. Nunc
-        aliquet vulputate justo a luctus. Vestibulum ante ipsum primis in
-        faucibus orci luctus et ultrices posuere cubilia curae; Aliquam
-        ullamcorper, urna a ultrices vulputate, metus lectus consectetur mi, sit
-        amet lacinia risus dolor quis orci. Nullam porta lacus a finibus
-        molestie. Maecenas sed nisl id ligula ultricies interdum non malesuada
-        erat. Suspendisse euismod vestibulum suscipit. Nulla posuere interdum
-        augue, id consectetur orci venenatis nec.
-      </p>
-      <img src="./mehyar.jpg" alt="portrait" />
+      <div role="img" alt="Logo" class="logo"></div>
+      <div role="img" alt="Background Photo" class="background-photo"></div>
+      <section aria-label="About">
+        <h1 class="title">Mehyar Abboud</h1>
+        <h3 id="about">About</h3>
+        <p>
+          Mehyar Abboud is a musician and composer from Masyaf/Syria and
+          currently resides in Berlin. He plays the Oud as his primary
+          instrument, cello secondarily and sings. Abboud has a strong passion
+          for music and has dedicated much of his life to playing and
+          experimenting with varies types of music as well as studying music
+          pedagogy in Berlin.
+        </p>
+        <a href="#about" id="read-more" onclick="handleReadMore()"
+          >Read more ...</a
+        >
+        <div
+          class="hidden transition-expand-in"
+          id="read-more-hidden-container"
+        >
+          <h3>Arabic & Western</h3>
+          <p>
+            Through his musical career Abboud has developed a unique style of
+            music that blends the traditional sounds of Arabic music with the
+            harmonies and rhythms of Western music of all genres. He has gained
+            recognition for his emotive compositions and performances,
+            collaborating with various artists and ensembles from around the
+            world.
+          </p>
+          <h3>Composition</h3>
+          <p>
+            Abboud discovered his passion for composition in his youth, finding
+            refuge in writing music during the difficult times in Syria. He was
+            always fascinated with European classical music and combines this
+            with his Arabic musical background in his composing style. Upon
+            arrival in Berlin, he explored fusion and alternative music. His
+            compositions range from orchestral music to chamber and band music.
+          </p>
+          <h3>Education</h3>
+          <p>
+            Mehyar Abboud has earned a bachelor's degree in Waldorf education
+            from Freie Hochschule Stuttgart and is currently studying for a
+            master's degree in Upper School Teacher in Music at Waldorf Schools.
+            Throughout his musical career, he has been continually active in
+            music education and pedagogy. He was active in several music
+            education projects and associations as a music teacher, musician,
+            and composer. He is academically engaged with issues of diversity in
+            musical education and music pedagogy according to Western and
+            Eastern techniques. He continues to work tirelessly to preserve the
+            cultural heritage of Arabic music through teaching and mentorship
+            while also exploring new musical fusion possibilities.
+          </p>
+        </div>
+      </section>
+      <section aria-label="Contact" class="contact">
+        <h1 id="contact">Contact</h1>
+        <a href="mailto:contact@mehyarabboud.com" aria-label="Email"
+          >contact@mehyarabbout.com</a
+        >
+        <a href="tel:+4917631481300" aria-label="Phone">+49 (0)176 31481300</a>
+        <a
+          href="https://soundcloud.com/user-392007904"
+          aria-label="SoundCloud"
+          target="_blank"
+          >SoundCloud</a
+        >
+        <a
+          href="https://me-vampr.app.link/agUlxUKFAzb"
+          aria-label="Vampr"
+          target="_blank"
+          >Vampr</a
+        >
+        <img src="./photo.png" class="photo" />
+      </section>
     </main>
-    <script src="main.js"></script>
+    
   </body>
 </html>
