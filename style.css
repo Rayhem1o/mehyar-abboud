@@ -93,6 +93,12 @@ h1 {
   margin-top: 2rem;
   position: relative;
   z-index: 1;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  h1 {
+    width: auto;
+  }
 }
 
 h3 {
@@ -159,15 +165,15 @@ img.profile {
   max-width: min(28rem, 90vw);
 }
 
-section.contact {
+section.dark {
   position: relative;
   background: black;
   color: white;
 }
-section.contact a {
+section.dark a {
   color: var(--color-orange);
 }
-section.contact::before {
+section.dark::before {
   content: "";
   position: absolute;
   top: 0;
@@ -192,4 +198,8 @@ section.contact::before {
   animation-name: expand;
   animation-timing-function: ease-in-out;
   overflow: hidden;
+}
+
+article {
+  padding: 1rem 0;
 }
