@@ -14,6 +14,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  --main-max-width: 768px;
 }
 
 @media (prefers-color-scheme: light) {
@@ -22,7 +23,7 @@
     --color-green: #2f5446;
     --color-sky: #a3e2dc;
     --color-white: #fff;
-    --color-orange: #f4925c;
+    --color-orange: #e7783a;
     --color-red: #7f3417;
     --color-brown: #281811;
   }
@@ -59,7 +60,6 @@ main {
   display: grid;
   place-items: center;
   box-sizing: border-box;
-  gap: 2rem;
 }
 main {
   overflow: hidden;
@@ -69,10 +69,15 @@ section {
   display: block;
   min-width: 320px;
   width: 100vw;
-  max-width: 768px;
   display: grid;
   place-items: start;
-  padding: 0 1rem;
+  max-width: var(--main-max-width);
+  padding: 1rem;
+}
+
+article {
+  padding: 1rem 0;
+  border-top: solid 1px white;
 }
 
 a {
@@ -85,26 +90,41 @@ a[href^="#"]:not(#read-more) {
   color: inherit;
 }
 
+/* Headings */
+
 h1 {
   text-align: center;
   font-family: "Aref Ruqaa Ink", Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   line-height: 1.1;
   margin-top: 2rem;
   position: relative;
   z-index: 1;
   width: 100%;
 }
-@media screen and (min-width: 768px) {
-  h1 {
-    width: auto;
-  }
+
+h2 {
+  font-size: 1.5rem;
 }
 
 h3 {
   font-size: 1rem;
   text-align: left;
 }
+
+@media screen and (min-width: 768px) {
+  h1 {
+    width: auto;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Pictures */
 
 img {
   margin: 0 auto;
@@ -161,8 +181,36 @@ p {
   text-align: justify;
 }
 
+footer {
+  width: 100vw;
+  background-color: var(--color-orange);
+  color: var(--color-white) !important;
+  padding: 1rem;
+}
+
+footer a {
+  color: var(--color-white);
+  display: block;
+}
+
+footer .footer-content {
+  width: min(var(--main-max-width), 100%);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  footer .footer-content {
+    flex-direction: row;
+    gap: max(10vw, 3rem);
+  }
+}
+
 img.profile {
   max-width: min(28rem, 90vw);
+  position: relative;
+  top: 1rem;
 }
 
 section.dark {
@@ -198,8 +246,4 @@ section.dark::before {
   animation-name: expand;
   animation-timing-function: ease-in-out;
   overflow: hidden;
-}
-
-article {
-  padding: 1rem 0;
 }
